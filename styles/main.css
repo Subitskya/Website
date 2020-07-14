@@ -47,17 +47,47 @@
 .navbar-nav ul li a:hover{
     color: blue!important;
 }
+
+.nav-bar{
+    display: list-item;
+}
+
+
+.navbar-brand{
+    float:left;
+}
+
+.navbar-nav{
+    float: right;
+}
+
 .navbar{
     background:#C0C0C0;
 }
+
 .navbar-toggler {
     border: none!important;
 }
+
+nav{
+    background: gray;
+    padding: 20px;
+    height: 40px;
+}
+
 .nav-link{
     color: black!important;
     font-weight: 600;
+    padding: 20px;
     font-size: 16px;
+    text-decoration: none;
 }
+.nav-link:hover{
+    color: white !important;
+    background: green;
+    border-radius: 5px;
+}
+
 /*Slider*/
 #slider{
     width: 100%;
@@ -353,4 +383,78 @@ input[type=text], select, textarea {
     background-color: grey;
     min-height: 50px;
     width: 850px;
+}
+
+.slider{
+    max-width: width cover;;
+    border:10px solid white;
+    margin: 5px auto;
+    position: relative;
+}
+
+.slider .left-slide, .slider .right-slide{
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    background-color: #444444;
+    border-radius: 50%;
+    color: #ffffff;
+    font-size:14px;
+    top: 50%;
+    cursor: pointer;
+    margin-top: -20px;
+    text-align: center;
+    line-height: 40px;
+    transition: all .5s ease;
+}
+
+.slider .left-slide:hover, .slider .right-slide:hover{
+    box-shadow: 0px 0px 10px black;
+    background-color:#29a8e2 ;
+}
+
+.slider .left-slide{
+    left:30px;
+}
+
+.slider .right-slide{
+    right: 30px;
+}
+
+.slider .slider-items .item img{
+    max-width: 100%;
+    display: block;
+    animation: zoom 1s ease;
+}
+
+@keyframe zoom{
+    0%{transform: scale(2);opacity:0}
+    100%{transform: scale(2);opacity:0}
+}
+
+.slider .slider-items .item{
+    display: none;
+    position: relative;
+}
+
+.slider .slider-items .item .caption{
+    position: absolute;
+    width: 100%;
+    bottom: 0px;
+    height: 350px;
+    left: 0px;
+    text-align: center;
+    color: #fff;
+}
+
+.slider .slider-items .item .caption h5{
+    font-size: 48px;
+}
+
+.slider .slider-items .item .caption p{
+    font-size: 19px;
+}
+
+.slider .slider-items .item.active{
+    display: block;
 }
